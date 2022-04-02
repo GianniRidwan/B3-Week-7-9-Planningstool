@@ -11,15 +11,17 @@
 <body>
     <?php 
         include 'connect.php';
-        $stmt = $conn->prepare ("SELECT * FROM games");
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC); 
-        $order = 0;
+        
+        echo '<header><h1>Bekijk alle ' . count($result) . ' spellen die je kunt spelen</h1></header>';
+    ?>
 
-        foreach ($result as $row){?>
+        <div id='container'>
+            <a class='button' href="reservation.php">Reserveren</a>
+        </div>
+        <?php foreach ($result as $row){?>
         
         <div id="container">
-            <a class="item" href="info.php?id=<?php echo $order ?>"> 
+            <a class="item" href="info.php?id=<?php echo $row['id'] ?>"> 
                 <div class="left"> 
                     <img class="avatar" src="./images/<?php echo $row['image'] ?>"> 
                 </div> 
@@ -30,19 +32,8 @@
             </a> 
         </div>
 
-        <?php
-         }; $order++;
-        ?>
+        <?php }; ?>
 
-
-    <!-- <script>
-    if (confirm('Are you sure you want to save this thing into the database?')) {
-    // Save it!
-    console.log('Thing was saved to the database.');
-    } else {
-    // Do nothing!
-    console.log('Thing was not saved to the database.');
-    }
-    </script> -->
+<footer>&copy; Gianni 2022</footer>
 </body>
 </html>
