@@ -11,7 +11,6 @@
 <body>
     <?php 
         include 'connect.php';
-        
     ?>
 
 <header><h1>Reserveringen</h1></header>
@@ -19,6 +18,12 @@
 <div id='container'>
     <a class='button' href="index.php">Terug naar spellen</a>
 </div>
+
+<table class="table">
+    <tbody>
+       <?php include 'read.php'; ?>
+    </tbody>
+</table>
 
 <form id="container" action="create.php" method="POST">
     <label for="game">Kies een spel: </label>
