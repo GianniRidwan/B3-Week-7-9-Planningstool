@@ -99,7 +99,8 @@ footer {
     list-style: none;
 }
 
-#table {
-    width: 1000px;
-    background-color: red;
+.btn {
+    border-style: solid;
+    border-width: 0.5px;
+    padding: 1px;
 }

@@ -45,9 +45,20 @@
     <input type="number" id="aantal" name="aantal">
     <br><br>
 
-    <input type="submit">
+    <input type="submit"onclick='myCreate()'>
 </form>
 
 <footer>&copy; Gianni 2022</footer>
 </body>
+<script> 
+function myFunction(){
+    return confirm('Weet u het zeker?');
+}
+function myCreate(){
+    alert("Succesvol gereserveerd!");
+}
+function myUpdate(){
+    alert("Succesvol aangepast!");
+}
+</script>
 </html>
