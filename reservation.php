@@ -19,7 +19,7 @@
     <a class='button' href="index.php">Terug naar spellen</a>
 </div>
 
-<table class="table">
+<table id="container" class="table">
     <tbody>
        <?php include 'read.php'; ?>
     </tbody>

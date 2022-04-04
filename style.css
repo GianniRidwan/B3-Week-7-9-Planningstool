@@ -98,3 +98,8 @@ footer {
 .gear {
     list-style: none;
 }
+
+#table {
+    width: 1000px;
+    background-color: red;
+}
